@@ -1,4 +1,5 @@
 import 'package:cardpalz/widgets/header.dart';
+import 'package:cardpalz/widgets/progress.dart';
 import 'package:flutter/material.dart';
 
 class Timeline extends StatefulWidget {
@@ -11,7 +12,7 @@ class _TimelineState extends State<Timeline> {
   Widget build(context) {
     return Scaffold(
       appBar: header(context, isAppTitle: true),
-      body: Text("Timeline"),
+      body: circularProgress(),
     );
   }
 }
