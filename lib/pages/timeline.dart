@@ -2,6 +2,7 @@ import 'package:cardpalz/widgets/header.dart';
 import 'package:cardpalz/widgets/progress.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
 final usersRef = Firestore.instance.collection('users');
 
 class Timeline extends StatefulWidget {
@@ -13,7 +14,32 @@ class _TimelineState extends State<Timeline> {
   @override
   void initState() {
     // getUserById();
+    // createUser();
+    // updateUser();
+    deleteUser();
     super.initState();
+  }
+
+  createUser() {
+    usersRef
+        .document("asdfasfd")
+        .setData({"username": "Jeff", "postsCount": 0, "isAdmin": false});
+  }
+
+  updateUser() async {
+    final doc = await usersRef.document("NFWpxQshn5DSkpZE3m8o").get();
+    if (doc.exists) {
+      doc.reference
+          .updateData({"username": "John", "postsCount": 0, "isAdmin": false});
+    }
+  }
+
+  deleteUser() async {
+    final DocumentSnapshot doc =
+        await usersRef.document("NFWpxQshn5DSkpZE3m8o").get();
+    if (doc.exists) {
+      doc.reference.delete();
+    }
   }
 
   // getUserById() async {
