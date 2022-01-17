@@ -29,6 +29,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
   bool isAuth = false;
   PageController pageController;
   int pageIndex = 0;
@@ -51,9 +52,9 @@ class _HomeState extends State<Home> {
     });
   }
 
-  handleSignIn(GoogleSignInAccount account) {
+  handleSignIn(GoogleSignInAccount account) async {
     if (account != null) {
-      createUserInFirestore();
+      await createUserInFirestore();
       setState(() {
         isAuth = true;
       });
@@ -84,6 +85,12 @@ class _HomeState extends State<Home> {
         "bio": "",
         "timestamp": timestamp
       });
+      // make new user their own follower (to include their posts in their timeline)
+      await followersRef
+          .document(user.id)
+          .collection('userFollowers')
+          .document(user.id)
+          .setData({});
 
       doc = await usersRef.document(user.id).get();
     }
@@ -121,6 +128,7 @@ class _HomeState extends State<Home> {
 
   Scaffold buildAuthScreen() {
     return Scaffold(
+      key: _scaffoldKey,
       body: PageView(
         children: <Widget>[
           Timeline(currentUser: currentUser),
