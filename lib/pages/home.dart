@@ -45,13 +45,13 @@ class _HomeState extends State<Home> {
     googleSignIn.onCurrentUserChanged.listen((account) {
       handleSignIn(account);
     }, onError: (err) {
-      print('Error signing in: $err');
+      //print('Error signing in: $err');
     });
     // Reauthenticate user when app is opened
     googleSignIn.signInSilently(suppressErrors: false).then((account) {
       handleSignIn(account);
     }).catchError((err) {
-      print('Error signing in: $err');
+      //print('Error signing in: $err');
     });
   }
 
@@ -227,7 +227,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'FlutterShare',
+              'CardPalz',
               style: TextStyle(
                 fontFamily: "Signatra",
                 fontSize: 90.0,

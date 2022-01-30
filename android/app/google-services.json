@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "842970573028",
+    "project_id": "cardpalz-ecf65",
+    "storage_bucket": "cardpalz-ecf65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842970573028:android:40697d74c84662e9b664f1",
+        "android_client_info": {
+          "package_name": "com.cardpalz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842970573028-iqe0vo1v1boupc8l8189eds3eo23sdhg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cardpalz",
+            "certificate_hash": "22e84b80fc47ebdd46bd83cf916d055821fe5a51"
+          }
+        },
+        {
+          "client_id": "842970573028-dgrb62kllqcpijs1koo2p3g4otgrsaej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw7Q0NKsgL6UB8s4dMTr_yRzrNSBo0ot0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842970573028-dgrb62kllqcpijs1koo2p3g4otgrsaej.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "842970573028-lhveks84n7d1d9k1o3vfh8hb5613cb4u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cardpalz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

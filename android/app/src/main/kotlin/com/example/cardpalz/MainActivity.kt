@@ -1,4 +1,4 @@
-package com.example.cardpalz
+package com.cardpalz
 
 import io.flutter.embedding.android.FlutterActivity
 

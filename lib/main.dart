@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:cardpalz/pages/home.dart';
 
 void main() {
-  Firestore.instance.settings(timestampsInSnapshotsEnabled: true).then((_) {
-    //print("Timestamps enabled in snapshots\n");
-  }, onError: (_) {
-    //print("Error enabling timestamps in snapshots\n");
-  });
+  WidgetsFlutterBinding.ensureInitialized();
+  Firestore.instance;
   runApp(MyApp());
 }
 
