@@ -23,6 +23,7 @@ if (flutterVersionName == null) {
 
 apply plugin: 'com.android.application'
 apply plugin: "com.google.gms.google-services"
+apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
@@ -85,4 +86,5 @@ dependencies {
     implementation "com.google.firebase:firebase-messaging"
     implementation "com.google.firebase:firebase-analytics"
     implementation "com.google.firebase:firebase-iid"
+    implementation 'com.google.firebase:firebase-crashlytics'
 }
