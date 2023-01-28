@@ -94,7 +94,6 @@ class _HomeState extends State<Home> {
             body,
             overflow: TextOverflow.ellipsis,
           ));
-          _scaffoldKey.currentState.showSnackBar(snackbar);
         }
         //print("Notification NOT shown");
       },

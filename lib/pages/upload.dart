@@ -81,10 +81,7 @@ class _UploadState extends State<Upload>
           SvgPicture.asset('assets/images/upload.svg', height: 260.0),
           Padding(
             padding: EdgeInsets.only(top: 20.0),
-            child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
+            child: ElevatedButton(
                 child: Text(
                   "Upload Image",
                   style: TextStyle(
@@ -92,7 +89,6 @@ class _UploadState extends State<Upload>
                     fontSize: 22.0,
                   ),
                 ),
-                color: Colors.deepOrange,
                 onPressed: () => selectImage(context)),
           ),
         ],
@@ -175,7 +171,7 @@ class _UploadState extends State<Upload>
           style: TextStyle(color: Colors.black),
         ),
         actions: [
-          FlatButton(
+          TextButton(
             onPressed: isUploading ? null : () => handleSubmit(),
             child: Text(
               "Post",
@@ -249,15 +245,11 @@ class _UploadState extends State<Upload>
             width: 200.0,
             height: 100.0,
             alignment: Alignment.center,
-            child: RaisedButton.icon(
+            child: ElevatedButton.icon(
               label: Text(
                 "Use Current Location",
                 style: TextStyle(color: Colors.white),
               ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              color: Colors.blue,
               onPressed: getUserLocation,
               icon: Icon(
                 Icons.my_location,

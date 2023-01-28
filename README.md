@@ -1,6 +1,6 @@
 # cardpalz
 
-A new Flutter project.
+A sports card social network app.
 
 ## Getting Started
 
