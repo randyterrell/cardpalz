@@ -1,0 +1,31 @@
+# Automatically generated on 2023-01-30 UTC from https://codemagic.io/app/63b10815cf72bf00268896c3/settings
+# Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
+
+workflows:
+  default-workflow:
+    name: Default Workflow
+    max_build_duration: 60
+    environment:
+      flutter: default
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - flutter packages pub get
+      - find . -name "Podfile" -execdir pod install \;
+      - flutter build ios --debug --no-codesign
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - '*.snap'
+      - build/windows/**/*.msix
+      - flutter_drive.log
+    publishing:
+      email:
+        recipients:
+          - randy.l.terrell@gmail.com
+      firebase:
+        firebase_token: Encrypted(Z0FBQUFBQmoxMUxEWC1Ud25UQTVlUk9fb2dwOXhSbDdSUGlTYXh1UHNmUFdVb1RSMU14eG1OcndaY2dPVFdSUm1FZnVfdUVLMGNTRVR4UDJNNGJwcnlyMWNfdkV6TWtueHdwOFRtVDVDd3BhdEJha0RlU1RGTHZOdnRXaXpJc3dVV01VUEEtaVhHeThuMkU5SEx0YXFWLUZCNWFPazFyOERKTmlYVmc3dTQtWDUwMnpWWEZiOWFPNmFWZTJfUnR3cF9hdEJUMk13V0NTWVBoemotWTVGRkhGbmgxNDhsYmpIdz09)
+        ios:
+          app_id: 1:842970573028:ios:ddebb359b4110605b664f1
+          groups:
+            - beta
