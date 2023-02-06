@@ -14,6 +14,26 @@
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		B21643EE277D48E20068F86C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B21643ED277D48E20068F86C /* GoogleService-Info.plist */; };
+		B2CECB592990701C0056D588 /* FlyTranslate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB52299070190056D588 /* FlyTranslate.xcframework */; };
+		B2CECB5A2990701C0056D588 /* FlyTranslate.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB52299070190056D588 /* FlyTranslate.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2CECB5B2990701C0056D588 /* FlyNetwork.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB532990701A0056D588 /* FlyNetwork.xcframework */; };
+		B2CECB5C2990701C0056D588 /* FlyNetwork.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB532990701A0056D588 /* FlyNetwork.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2CECB5D2990701C0056D588 /* FlyCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB542990701A0056D588 /* FlyCommon.xcframework */; };
+		B2CECB5E2990701C0056D588 /* FlyCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB542990701A0056D588 /* FlyCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2CECB5F2990701C0056D588 /* FlyXmpp.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB552990701B0056D588 /* FlyXmpp.xcframework */; };
+		B2CECB602990701C0056D588 /* FlyXmpp.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB552990701B0056D588 /* FlyXmpp.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2CECB612990701C0056D588 /* FlyCall.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB562990701B0056D588 /* FlyCall.xcframework */; };
+		B2CECB622990701D0056D588 /* FlyCall.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB562990701B0056D588 /* FlyCall.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2CECB632990701D0056D588 /* FlyCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB572990701B0056D588 /* FlyCore.xcframework */; };
+		B2CECB642990701D0056D588 /* FlyCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB572990701B0056D588 /* FlyCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2CECB652990701D0056D588 /* FlyDatabase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB582990701C0056D588 /* FlyDatabase.xcframework */; };
+		B2CECB662990701D0056D588 /* FlyDatabase.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CECB582990701C0056D588 /* FlyDatabase.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2CECB6E299074C70056D588 /* FlyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CECB68299074C70056D588 /* FlyEvents.swift */; };
+		B2CECB6F299074C70056D588 /* FlyBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CECB69299074C70056D588 /* FlyBaseController.swift */; };
+		B2CECB70299074C70056D588 /* FlySdkMethodCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CECB6A299074C70056D588 /* FlySdkMethodCalls.swift */; };
+		B2CECB71299074C70056D588 /* JsonSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CECB6B299074C70056D588 /* JsonSerializer.swift */; };
+		B2CECB72299074C70056D588 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CECB6C299074C70056D588 /* UserDefaults.swift */; };
+		B2CECB73299074C70056D588 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CECB6D299074C70056D588 /* Commons.swift */; };
 		B2E99DAC295EB27300BB9C4E /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B7CE8BBC46AC743A113237 /* Pods_Runner.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -24,6 +44,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B2CECB5C2990701C0056D588 /* FlyNetwork.xcframework in Embed Frameworks */,
+				B2CECB5E2990701C0056D588 /* FlyCommon.xcframework in Embed Frameworks */,
+				B2CECB642990701D0056D588 /* FlyCore.xcframework in Embed Frameworks */,
+				B2CECB602990701C0056D588 /* FlyXmpp.xcframework in Embed Frameworks */,
+				B2CECB662990701D0056D588 /* FlyDatabase.xcframework in Embed Frameworks */,
+				B2CECB5A2990701C0056D588 /* FlyTranslate.xcframework in Embed Frameworks */,
+				B2CECB622990701D0056D588 /* FlyCall.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +74,20 @@
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B21643ED277D48E20068F86C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B2CECB52299070190056D588 /* FlyTranslate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlyTranslate.xcframework; path = ../../../../Downloads/iosSDK_5.6.1/FlyTranslate.xcframework; sourceTree = "<group>"; };
+		B2CECB532990701A0056D588 /* FlyNetwork.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlyNetwork.xcframework; path = ../../../../Downloads/iosSDK_5.6.1/FlyNetwork.xcframework; sourceTree = "<group>"; };
+		B2CECB542990701A0056D588 /* FlyCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlyCommon.xcframework; path = ../../../../Downloads/iosSDK_5.6.1/FlyCommon.xcframework; sourceTree = "<group>"; };
+		B2CECB552990701B0056D588 /* FlyXmpp.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlyXmpp.xcframework; path = ../../../../Downloads/iosSDK_5.6.1/FlyXmpp.xcframework; sourceTree = "<group>"; };
+		B2CECB562990701B0056D588 /* FlyCall.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlyCall.xcframework; path = ../../../../Downloads/iosSDK_5.6.1/FlyCall.xcframework; sourceTree = "<group>"; };
+		B2CECB572990701B0056D588 /* FlyCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlyCore.xcframework; path = ../../../../Downloads/iosSDK_5.6.1/FlyCore.xcframework; sourceTree = "<group>"; };
+		B2CECB582990701C0056D588 /* FlyDatabase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlyDatabase.xcframework; path = ../../../../Downloads/iosSDK_5.6.1/FlyDatabase.xcframework; sourceTree = "<group>"; };
+		B2CECB67299073500056D588 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
+		B2CECB68299074C70056D588 /* FlyEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlyEvents.swift; path = ../../../../../Downloads/flyswift/FlyEvents.swift; sourceTree = "<group>"; };
+		B2CECB69299074C70056D588 /* FlyBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlyBaseController.swift; path = ../../../../../Downloads/flyswift/FlyBaseController.swift; sourceTree = "<group>"; };
+		B2CECB6A299074C70056D588 /* FlySdkMethodCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlySdkMethodCalls.swift; path = ../../../../../Downloads/flyswift/FlySdkMethodCalls.swift; sourceTree = "<group>"; };
+		B2CECB6B299074C70056D588 /* JsonSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonSerializer.swift; path = ../../../../../Downloads/flyswift/JsonSerializer.swift; sourceTree = "<group>"; };
+		B2CECB6C299074C70056D588 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = ../../../../../Downloads/flyswift/UserDefaults.swift; sourceTree = "<group>"; };
+		B2CECB6D299074C70056D588 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Commons.swift; path = ../../../../../Downloads/flyswift/Commons.swift; sourceTree = "<group>"; };
 		BC099837157B56F9E8A420C1 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1058F411F4F63A4A359ADA /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +97,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CECB5F2990701C0056D588 /* FlyXmpp.xcframework in Frameworks */,
+				B2CECB612990701C0056D588 /* FlyCall.xcframework in Frameworks */,
+				B2CECB632990701D0056D588 /* FlyCore.xcframework in Frameworks */,
+				B2CECB5D2990701C0056D588 /* FlyCommon.xcframework in Frameworks */,
+				B2CECB592990701C0056D588 /* FlyTranslate.xcframework in Frameworks */,
 				B2E99DAC295EB27300BB9C4E /* Pods_Runner.framework in Frameworks */,
+				B2CECB652990701D0056D588 /* FlyDatabase.xcframework in Frameworks */,
+				B2CECB5B2990701C0056D588 /* FlyNetwork.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +114,13 @@
 		500ECA7143510D15774A569A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2CECB562990701B0056D588 /* FlyCall.xcframework */,
+				B2CECB542990701A0056D588 /* FlyCommon.xcframework */,
+				B2CECB572990701B0056D588 /* FlyCore.xcframework */,
+				B2CECB582990701C0056D588 /* FlyDatabase.xcframework */,
+				B2CECB532990701A0056D588 /* FlyNetwork.xcframework */,
+				B2CECB52299070190056D588 /* FlyTranslate.xcframework */,
+				B2CECB552990701B0056D588 /* FlyXmpp.xcframework */,
 				90B7CE8BBC46AC743A113237 /* Pods_Runner.framework */,
 			);
 			name = Frameworks;
@@ -105,7 +160,14 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				B2CECB67299073500056D588 /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
+				B2CECB6D299074C70056D588 /* Commons.swift */,
+				B2CECB69299074C70056D588 /* FlyBaseController.swift */,
+				B2CECB68299074C70056D588 /* FlyEvents.swift */,
+				B2CECB6A299074C70056D588 /* FlySdkMethodCalls.swift */,
+				B2CECB6B299074C70056D588 /* JsonSerializer.swift */,
+				B2CECB6C299074C70056D588 /* UserDefaults.swift */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
 				97C147021CF9000F007C117D /* Info.plist */,
@@ -299,8 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CECB6F299074C70056D588 /* FlyBaseController.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				B2CECB6E299074C70056D588 /* FlyEvents.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+				B2CECB73299074C70056D588 /* Commons.swift in Sources */,
+				B2CECB70299074C70056D588 /* FlySdkMethodCalls.swift in Sources */,
+				B2CECB72299074C70056D588 /* UserDefaults.swift in Sources */,
+				B2CECB71299074C70056D588 /* JsonSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -565,6 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;

@@ -44,6 +44,8 @@ dependencies:
   timeago: 2.0.17
   cached_network_image: ^2.1.0
   flutter_svg:
+  flysdk:
+      path: packages/flysdk
 
 dependency_overrides:
   platform: ^3.1.0

@@ -224,6 +224,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flysdk:
+    dependency: "direct main"
+    description:
+      path: "packages/flysdk"
+      relative: true
+    source: path
+    version: "0.0.1"
   geolocator:
     dependency: "direct main"
     description:
