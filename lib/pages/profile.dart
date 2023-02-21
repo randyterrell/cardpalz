@@ -279,17 +279,7 @@ class _ProfileState extends State<Profile> {
                     ),
                   ],
                 ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(top: 12.0),
-                  child: Text(
-                    user.username,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0,
-                    ),
-                  ),
-                ),
+
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(top: 4.0),
@@ -307,6 +297,24 @@ class _ProfileState extends State<Profile> {
                     user.bio,
                   ),
                 ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(top: 2.0),
+                  child: Text(
+                    user.bio,
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(top: 12.0),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                    ),
+                  onPressed: () { },
+                  child: const Text('Message'),
+                  )
+                ),                
               ],
             ),
           );
