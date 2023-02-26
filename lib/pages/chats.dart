@@ -5,20 +5,18 @@ import 'package:cardpalz/pages/home.dart';
 import 'package:cardpalz/widgets/header.dart';
 import 'package:cardpalz/widgets/progress.dart';
 import 'package:timeago/timeago.dart' as timeago;
-import 'package:cardpalz/models/user.dart';
 
 
-final usersRef = Firestore.instance.collection('users');
-final chatRef = Firestore.instance.collection('chat');
+final chatRef = Firestore.instance.collection('chats');
 
 
-class Chat extends StatefulWidget {
-  final String chatId;
+class Chats extends StatefulWidget {
+  String chatId;
   final String idFrom;
   final String idTo;
   final String content;
 
-  Chat({
+  Chats({
     this.chatId,
     this.idFrom,
     this.idTo,
@@ -26,7 +24,7 @@ class Chat extends StatefulWidget {
     });
 
   @override
-  _ChatState createState() => _ChatState(
+  _ChatsState createState() => _ChatsState(
         chatId: this.chatId,
         idFrom: this.idFrom,
         idTo: this.idTo,
@@ -34,35 +32,34 @@ class Chat extends StatefulWidget {
       );
 }
 
-class _ChatState extends State<Chat> {
+class _ChatsState extends State<Chats> {
   TextEditingController chatController = TextEditingController();
-  final String chatId;
+  String chatId;
   final String idFrom;
   final String idTo;
   final String content;
 
-  _ChatState({
+  _ChatsState({
     this.chatId,
     this.idFrom,
     this.idTo,
     this.content
   });
 
-
   buildChat() {
     return StreamBuilder(
         stream: chatRef
             .document(chatId)
-            .collection('chat')
+            .collection('chats')
             .orderBy("timestamp", descending: false)
             .snapshots(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return circularProgress();
           }
-          List<_Chat> chats = [];
+          List<_Chats> chats = [];
           snapshot.data.documents.forEach((doc) {
-            chats.add(_Chat.fromDocument(doc));
+            chats.add(_Chats.fromDocument(doc));
           });
           return ListView(
             children: chats,
@@ -71,13 +68,19 @@ class _ChatState extends State<Chat> {
   }
 
   addChat() {
-    chatRef.document(chatId).collection("messages").add({
+    if (idFrom.compareTo(idTo) > 0) {
+      chatId = '$idFrom-$idTo';
+    } else {
+      chatId = '$idFrom-$idTo';
+    }
+    chatRef.document(chatId).collection("chats").add({
       "username": currentUser.username,
       "content": chatController.text,
       "timestamp": timestamp,
       "avatarUrl": currentUser.photoUrl,
-      "userId": currentUser.id,
-      "messagesId": chatId,
+      "idFrom": idFrom,
+      "idTo": idTo,
+      "chatId": chatId,
       "type": "chat",
     });
     chatController.clear();
@@ -107,31 +110,31 @@ class _ChatState extends State<Chat> {
   }
 }
 
-class _Chat extends StatelessWidget {
+class _Chats extends StatelessWidget {
   final String username;
   final String userId;
   final String avatarUrl;
   final String content;
   final Timestamp timestamp;
-  final Timestamp messagesId;
+  final String chatId;
 
-  _Chat({
+  _Chats({
     this.username,
     this.userId,
     this.avatarUrl,
     this.content,
     this.timestamp,
-    this.messagesId,
+    this.chatId,
   });
 
-  factory _Chat.fromDocument(DocumentSnapshot doc) {
-    return _Chat(
+  factory _Chats.fromDocument(DocumentSnapshot doc) {
+    return _Chats(
       username: doc['username'],
       userId: doc['userId'],
       content: doc['content'],
       timestamp: doc['timestamp'],
       avatarUrl: doc['avatarUrl'],
-      messagesId: doc['messagesId'],
+      chatId: doc['chatId'],
     );
   }
 
