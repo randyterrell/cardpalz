@@ -47,6 +47,11 @@ class _ChatsState extends State<Chats> {
   });
 
   buildChat() {
+    if (idFrom.compareTo(idTo) > 0) {
+      chatId = '$idFrom-$idTo';
+    } else {
+      chatId = '$idTo-$idFrom';
+    }
     return StreamBuilder(
         stream: chatRef
             .document(chatId)
@@ -71,12 +76,12 @@ class _ChatsState extends State<Chats> {
     if (idFrom.compareTo(idTo) > 0) {
       chatId = '$idFrom-$idTo';
     } else {
-      chatId = '$idFrom-$idTo';
+      chatId = '$idTo-$idFrom';
     }
     chatRef.document(chatId).collection("chats").add({
       "username": currentUser.username,
       "content": chatController.text,
-      "timestamp": timestamp,
+      "timestamp": DateTime.now(),
       "avatarUrl": currentUser.photoUrl,
       "idFrom": idFrom,
       "idTo": idTo,
