@@ -9,6 +9,8 @@ import 'package:cardpalz/widgets/header.dart';
 import 'package:cardpalz/widgets/post.dart';
 import 'package:cardpalz/widgets/post_tile.dart';
 import 'package:cardpalz/widgets/progress.dart';
+import 'package:cardpalz/pages/chats.dart';
+
 
 class Profile extends StatefulWidget {
   final String profileId;
@@ -279,17 +281,7 @@ class _ProfileState extends State<Profile> {
                     ),
                   ],
                 ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(top: 12.0),
-                  child: Text(
-                    user.username,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0,
-                    ),
-                  ),
-                ),
+
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(top: 4.0),
@@ -307,6 +299,26 @@ class _ProfileState extends State<Profile> {
                     user.bio,
                   ),
                 ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(top: 2.0),
+                  child: Text(
+                    user.bio,
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(top: 12.0),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                    ),
+                  onPressed: (){
+                    showChats(context, currentUserId: currentUserId, profileId: widget.profileId);
+                  },
+                  child: const Text('Message'),
+                  )
+                ),                
               ],
             ),
           );
@@ -402,4 +414,16 @@ class _ProfileState extends State<Profile> {
       ),
     );
   }
+
+  showChats(BuildContext context,
+    {String chatId, String currentUserId, String profileId, String content}) {
+  Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return Chats(
+      chatId: chatId,
+      idFrom: currentUserId,
+      idTo: profileId,
+      content: content,
+    );
+  }));
+}
 }
